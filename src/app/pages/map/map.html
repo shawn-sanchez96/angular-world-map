@@ -1,0 +1,34 @@
+<h1>World Map</h1>
+
+<div class="layout">
+  <!-- LEFT: SVG MAP -->
+  <div class="map-column">
+    <div
+      class="svg-host"
+      [innerHTML]="svgContent"
+      (click)="onSvgClick($event)"
+    ></div>
+
+    <p *ngIf="!svgContent">Loading SVG...</p>
+  </div>
+
+  <!-- RIGHT: COUNTRY INFO -->
+  <div class="info-column">
+    <h2>Country Information</h2>
+
+    <p *ngIf="!selectedCountry">
+      Select a country on the map to view details.
+    </p>
+
+    <div *ngIf="selectedCountry">
+      <p><strong>Name:</strong> {{ selectedCountry.name }}</p>
+      <p><strong>Capital:</strong> {{ selectedCountry.capital }}</p>
+      <p><strong>Region:</strong> {{ selectedCountry.region }}</p>
+      <p><strong>Income Level:</strong> {{ selectedCountry.incomeLevel }}</p>
+      <p><strong>Latitude:</strong> {{ selectedCountry.latitude }}</p>
+      <p><strong>Longitude:</strong> {{ selectedCountry.longitude }}</p>
+
+      <p><strong>ISO2 Code:</strong> {{ selectedCountry.iso2code }}</p>
+    </div>
+  </div>
+</div>

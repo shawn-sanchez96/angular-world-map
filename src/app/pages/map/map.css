@@ -1,0 +1,23 @@
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.map-column {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+.info-column {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+.svg-host svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}

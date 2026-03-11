@@ -1,0 +1,9 @@
+/* Hover highlight for injected SVG map */
+.svg-host svg [id] {
+  cursor: pointer;
+}
+
+.svg-host svg [id]:hover {
+  opacity: 0.75;
+  fill: #4da3ff;
+}
